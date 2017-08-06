@@ -6,5 +6,9 @@
 
 	<bean id="myorg"
 		class="com.rohitbelapurkar.mavendemo.Organization">
+	<constructor-arg value="BMW" name="companyName"></constructor-arg>
+	<constructor-arg value="1929" name="yearOfIncorporation"></constructor-arg>
+	<property name="postalCode" value="56565"></property>
+	<property name="employeeCount" value="456"></property>
 	</bean>
 </beans>
