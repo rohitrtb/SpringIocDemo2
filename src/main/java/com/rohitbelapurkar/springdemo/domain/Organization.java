@@ -1,4 +1,6 @@
-package com.rohitbelapurkar.mavendemo;
+package com.rohitbelapurkar.springdemo.domain;
+
+import com.rohitbelapurkar.springdemo.service.BusinessService;
 
 public class Organization {
 	
@@ -6,6 +8,8 @@ public class Organization {
 	private int yearOfIncorporation;
 	private int postalCode;
 	private int employeeCount;
+	private String slogan;
+	private BusinessService businessService;
 	
 	//Constructor for this class
 	public Organization(String companyName, int yearOfIncorporation) {
@@ -22,14 +26,25 @@ public class Organization {
 		this.postalCode = postalCode;
 	}
 
+	public void setSlogan(String slogan) {
+		this.slogan = slogan;
+	}
+
+	public void setBusinessService(BusinessService businessService) {
+		this.businessService = businessService;
+	}
+
 	@Override
 	public String toString() {
 		return "Organization [companyName=" + companyName + ", yearOfIncorporation=" + yearOfIncorporation
 				+ ", postalCode=" + postalCode + ", employeeCount=" + employeeCount + "]";
 	}
 
-	public void corporateSlogan() {
-		String slogan = "We build ultimate driving machines";
-		System.out.println(slogan);
+	public String corporateSlogan() {
+		return slogan;
+	}
+	
+	public String corporateService() {
+		return businessService.offerService(companyName);
 	}
 }

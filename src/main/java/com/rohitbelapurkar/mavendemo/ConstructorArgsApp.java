@@ -3,6 +3,8 @@ package com.rohitbelapurkar.mavendemo;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.rohitbelapurkar.springdemo.domain.Organization;
+
 public class ConstructorArgsApp {
 	
 	public static void main(String[] args) {
