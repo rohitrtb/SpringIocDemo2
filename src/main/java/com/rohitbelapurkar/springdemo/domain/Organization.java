@@ -30,6 +30,10 @@ public class Organization {
 		this.slogan = slogan;
 	}
 
+	public String getCompanyName() {
+		return companyName;
+	}
+
 	public void setBusinessService(BusinessService businessService) {
 		this.businessService = businessService;
 	}

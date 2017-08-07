@@ -19,4 +19,16 @@
 	<bean id="ecommerceService"
 		class="com.rohitbelapurkar.springdemo.serviceImpl.EcommerceServiceImpl">
 	</bean>
+	<bean id="agency"
+		class="com.rohitbelapurkar.springdemo.serviceImpl.AgencyRecruitmentServiceImpl">
+	</bean>
+	<bean id="referral"
+		class="com.rohitbelapurkar.springdemo.serviceImpl.ReferralRecruitmentServiceImpl">
+	</bean>
+	<bean id="myhrdept"
+		class="com.rohitbelapurkar.springdemo.domain.HumanResourceDept">
+	<constructor-arg name="recruitmentService" ref="referral"></constructor-arg>
+	<constructor-arg name="organization" ref="myorg"></constructor-arg>
+	<property name="departmentName" value="Human Resource Department"></property>
+	</bean>
 </beans>

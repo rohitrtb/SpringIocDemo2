@@ -3,6 +3,7 @@ package com.rohitbelapurkar.mavendemo;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.rohitbelapurkar.springdemo.domain.HumanResourceDept;
 import com.rohitbelapurkar.springdemo.domain.Organization;
 
 public class SetterApp {
@@ -18,9 +19,12 @@ public class SetterApp {
 		System.out.println(org.corporateSlogan());
 		
 		//Print organization details
-		System.out.println(org);
+/*		System.out.println(org);
 		
-		System.out.println(org.corporateService());
+		System.out.println(org.corporateService());*/
+		
+		HumanResourceDept hrDept = (HumanResourceDept)context.getBean("myhrdept");
+		System.out.println(hrDept.hiringStatus(1000));
 		
 		//Close the application context
 		((ClassPathXmlApplicationContext)context).close();
